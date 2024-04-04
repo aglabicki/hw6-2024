@@ -80,5 +80,29 @@ document.querySelector("#mute").addEventListener("click", function() {
 }
 );
 
+//8: volume slider
+document.querySelector("#slider").addEventListener("change", function() {
+    video = document.querySelector("#player1");
+    volume = document.querySelector("#slider").value;
+    volume_decimal = volume / 100 //convert do decimal
+    video.volume = volume_decimal;
+    document.querySelector("#volume").innerHTML = volume + "%"
+    console.log("The volume value is " + volume_decimal)
+}
+);
+
+//9: styled
+document.querySelector("#vintage").addEventListener("click", function() {
+    video = document.querySelector("#player1");
+    video.classList.add("oldSchool")
+}
+);
+
+//10: original
+document.querySelector("#orig").addEventListener("click", function() {
+    video = document.querySelector("#player1");
+    video.classList.remove("oldSchool")
+}
+);
 
 
